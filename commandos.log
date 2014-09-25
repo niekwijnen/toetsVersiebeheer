@@ -1,0 +1,19 @@
+mkdir toetsVersiebeheer2
+git status
+git init
+git remote add origin https://github.com/niekwijnen/toetsVersiebeheer
+touch index.html
+git commit -m 'index toegevoegd'
+vi index.html
+git commit -m 'citaat toegevoegd'
+git branch zandbak
+git checkout zandbak
+git add 26709.jpg
+git commit -m 'foto toegevoegd'
+git checkout zandbak
+git rebase master
+git checkout master
+git merge zandbak
+git commit -m 'commandos toegevoegd'
+git push origin master
+git push origin zandbak
